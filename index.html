@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .main-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .square-box {
+        width: 200px;
+        height: 200px;
+        background-color: darkred;
+        /* display: none; */
+      }
+      .button {
+        width: 80px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: aqua;
+        position: absolute;
+        text-align: center;
+        cursor: pointer;
+        /* transition: width height 2s; */
+      }
+
+      /* .button:active {
+        display: none;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="square-box">This is the Info</div>
+      <div class="button" onclick="toggle()">Read Info</div>
+    </div>
+
+    <script>
+      function toggle() {
+        const element = document.querySelector(".square-box");
+        if (element.style.display === "none") {
+          element.style.display = "block";
+        } else {
+          element.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
